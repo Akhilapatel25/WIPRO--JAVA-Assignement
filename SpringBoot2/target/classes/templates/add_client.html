@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${#strings.capitalize(client.id == null ? 'Add' : 'Update')} + ' Client'">Client Form</title>
+</head>
+<body>
+<div class="container">
+    <h2 th:text="${client.id == null ? 'Add New Client' : 'Update Client'}"></h2>
+    <form th:action="@{${client.id == null} ? '/clients/save' : '/clients/update'}"
+          th:object="${client}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        Name: <input type="text" th:field="*{name}" required/><br/>
+        Email: <input type="email" th:field="*{email}" required/><br/>
+        Phone: <input type="text" th:field="*{phone}" required/><br/>
+        Address: <input type="text" th:field="*{address}" required/><br/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
