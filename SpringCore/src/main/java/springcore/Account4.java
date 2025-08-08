@@ -6,7 +6,8 @@ public class Account4 {
     private double balance;
     private String type;
 
-    // Getters and Setters
+  
+    
     public int getNumber() { return number; }
     public void setNumber(int number) { this.number = number; }
 
@@ -26,3 +27,4 @@ public class Account4 {
         System.out.println("Account Type: " + type);
     }
 }
+
