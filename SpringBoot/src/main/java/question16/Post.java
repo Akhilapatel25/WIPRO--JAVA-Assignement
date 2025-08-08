@@ -6,7 +6,8 @@ public class Post {
     private String title;
     private String body;
 
-    // Constructors
+
+    
     public Post() {}
 
     public Post(int userId, int id, String title, String body) {
@@ -16,8 +17,9 @@ public class Post {
         this.body = body;
     }
 
-    // Getters and Setters
-    public int getUserId() {
+ 
+    
+        public int getUserId() {
         return userId;
     }
 
@@ -59,3 +61,4 @@ public class Post {
                '}';
     }
 }
+
