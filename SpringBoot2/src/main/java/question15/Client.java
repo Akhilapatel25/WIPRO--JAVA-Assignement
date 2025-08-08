@@ -23,8 +23,8 @@ public class Client {
     @NotBlank(message = "Address is required")
     private String address;
 
-    // Getters and Setters
-
+ 
+    
     public Long getId() {
         return id;
     }
@@ -65,3 +65,4 @@ public class Client {
         this.address = address;
     }
 }
+
