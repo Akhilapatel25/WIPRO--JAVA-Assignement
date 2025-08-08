@@ -14,9 +14,10 @@ public class RestaurantController {
     @GetMapping
     public List<Restaurant> getAllRestaurants() {
         return List.of(
-            new Restaurant(1, "Spice Garden", "Hyderabad"),
-            new Restaurant(2, "Taste Town", "Bangalore"),
-            new Restaurant(3, "Foodie's Hub", "Chennai")
+            new Restaurant(1, "Aroma", "Hyderabad"),
+            new Restaurant(2, "Raju Gari Thota", "Hyderabad"),
+            new Restaurant(3, "Peacock", "Karimnagar")
         );
     }
 }
+
