@@ -12,8 +12,9 @@ public class Account4{
         this.status = status;
     }
 
-    // Getters
+    
     public String getId() { return id; }
     public String getType() { return type; }
     public String getStatus() { return status; }
 }
+
