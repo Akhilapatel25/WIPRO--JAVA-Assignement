@@ -20,7 +20,8 @@ public class Restaurant {
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Food> foods;
 
-    // ----- Getters -----
+
+    
     public Long getId() {
         return id;
     }
@@ -37,7 +38,8 @@ public class Restaurant {
         return foods;
     }
 
-    // ----- Setters -----
+  
+    
     public void setId(Long id) {
         this.id = id;
     }
@@ -54,3 +56,4 @@ public class Restaurant {
         this.foods = foods;
     }
 }
+
