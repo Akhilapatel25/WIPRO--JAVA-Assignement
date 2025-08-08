@@ -12,7 +12,8 @@ public class User {
     private String name;
     private double salary;
 
-    // Getters and setters
+
+    
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -22,3 +23,4 @@ public class User {
     public double getSalary() { return salary; }
     public void setSalary(double salary) { this.salary = salary; }
 }
+
