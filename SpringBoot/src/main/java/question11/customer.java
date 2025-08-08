@@ -22,7 +22,7 @@ public class customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    // Getters and setters
+ 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -41,3 +41,4 @@ public class customer {
     public long getDateOfBirth() { return dateOfBirth; }
     public void setDateOfBirth(long dateOfBirth) { this.dateOfBirth = dateOfBirth; }
 }
+
