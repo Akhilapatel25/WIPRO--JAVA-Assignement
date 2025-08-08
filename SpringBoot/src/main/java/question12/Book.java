@@ -6,10 +6,10 @@ public class Book {
     private String author;
     private int price;
 
-    // ✅ Default constructor (required for Spring & Jackson)
+   =
     public Book() {}
 
-    // ✅ All-args constructor (your current usage needs this!)
+
     public Book(int bookid, String bookname, String author, int price) {
         this.bookid = bookid;
         this.bookname = bookname;
@@ -17,7 +17,6 @@ public class Book {
         this.price = price;
     }
 
-    // ✅ Getters and setters
     public int getBookid() { return bookid; }
     public void setBookid(int bookid) { this.bookid = bookid; }
 
@@ -30,3 +29,4 @@ public class Book {
     public int getPrice() { return price; }
     public void setPrice(int price) { this.price = price; }
 }
+
