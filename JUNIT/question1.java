@@ -7,7 +7,8 @@ import org.junit.Test;
 
 public class question1 {
 
-    // Method to calculate factorial
+
+    
     public static long factorial(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Factorial not defined for negative numbers");
@@ -19,7 +20,8 @@ public class question1 {
         return result;
     }
 
-    // Test method for valid inputs
+  
+    
     @Test
     public void testFactorial_ValidInputs() {
         assertEquals(1, factorial(0));
@@ -37,3 +39,4 @@ public class question1 {
 }
 
 //runs 2/2 errors:0 failures:0
+
