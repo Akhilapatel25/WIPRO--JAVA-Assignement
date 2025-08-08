@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class Freshman3 {
     private String name;
 
-    // Option 1: Autowiring by type
+ 
+    
     @Autowired
-    @Qualifier("roomA") // Uncomment this for Option 2
+    @Qualifier("roomA") 
     private DormRoom3 room;
 
     public Freshman3(String name) {
@@ -23,3 +24,4 @@ public class Freshman3 {
         System.out.println(name + " is assigned to: " + room.getLocation());
     }
 }
+
