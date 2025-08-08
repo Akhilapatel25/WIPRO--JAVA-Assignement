@@ -20,10 +20,12 @@ public class Food {
 
     @ManyToOne
     @JoinColumn(name = "restaurant_id")
-    @JsonIgnore  // Prevent infinite recursion in JSON
+    @JsonIgnore  
+    
     private Restaurant restaurant;
 
-    // ----- Getters -----
+
+    
     public Long getId() {
         return id;
     }
@@ -57,3 +59,4 @@ public class Food {
         this.restaurant = restaurant;
     }
 }
+
