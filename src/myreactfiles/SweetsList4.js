@@ -13,6 +13,7 @@ const SweetsList = () => {
   return (
     <div>
       <h2>Sweets List</h2>
+      {/* diplaying the sweetslist by iterating through map*/}
       {sweets.map((sweet) => (
         <div key={sweet.id}>
           {sweet.name} - Price: ₹{sweet.price}

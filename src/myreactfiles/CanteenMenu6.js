@@ -2,6 +2,7 @@ import React from "react";
 
 // Child component (CanteenItem)
 //presentation component also,because only UI part is available
+//destructuring and that we reference easily
 const CanteenItem = ({ name, price, category, available }) => {
   return (
     <li>

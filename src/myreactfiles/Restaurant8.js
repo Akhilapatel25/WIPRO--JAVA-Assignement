@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 // Child Component
 //presentation component too only UI presentation is available in this component
+//destructuring,In a class component, props are accessed using this.props
 class MenuItem extends Component {
   render() {
     const { name, price, category, available } = this.props;

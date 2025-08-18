@@ -1,59 +1,65 @@
 import React from "react";
 
-function ServiceCard({ service }) {
+const ServiceCard = ({ serviceName, price, fabricsAvailable }) => {
   return (
-    <div className="col-md-4 mb-4">
-      <div className="card shadow-sm">
-        <div className="card-body">
-          <h5 className="card-title">{service.serviceName}</h5>
-          <p className="card-text">Price: ₹{service.price}</p>
-          <h6>Fabrics Available:</h6>
-          <ul>
-            {/* nested map} */}
-             {service.fabricsAvailable.map((fabric, index) => (  
-              <li key={index}>{fabric}</li>
-            ))}
-          </ul>
-         </div>
-      </div>
+    <div style={{ display: "inline-block", margin: "0 10px", verticalAlign: "top" }}>
+      +-------------------+<br />
+      {`| ${serviceName.padEnd(17)} |`}<br />
+      {`| Price: $${price.toString().padEnd(11)} |`}<br />
+      {`| Fabrics:          |`}<br />
+      {fabricsAvailable.map((fabric, i) => (
+        <div key={i}>{`| - ${fabric.padEnd(14)} |`}</div>
+      ))}
+      +-------------------+<br />
     </div>
   );
-}
+};
 
-function TailorShop() {
-  const tailoringServices = [
+const TailorShop = () => {
+  const services = [
     {
-      serviceName: "Shirts",
-      price: 500,
+      serviceName: "Shirt",
+      price: 20,
       fabricsAvailable: ["Cotton", "Linen", "Polyester"],
     },
     {
       serviceName: "Pants",
-      price: 800,
-      fabricsAvailable: ["Denim", "Linen", "Twill"],
+      price: 30,
+      fabricsAvailable: ["Denim", "Wool", "Chino"],
     },
     {
       serviceName: "Lehenga",
-      price: 2500,
-      fabricsAvailable: ["Silk", "Velvet", "Georgette"],
+      price: 150,
+      fabricsAvailable: ["Silk", "Georgette", "Chiffon"],
     },
     {
       serviceName: "Blouse",
-      price: 700,
-      fabricsAvailable: ["Cotton Silk", "Brocade", "Net"],
+      price: 40,
+      fabricsAvailable: ["Cotton", "Silk", "Satin"],
     },
   ];
 
   return (
-    <div className="container my-4">
-      <h2 className="text-center mb-4">Tailoring Shop Services</h2>
-      <div className="row">
-        {tailoringServices.map((service, index) => (
-          <ServiceCard key={index} service={service} />
+    <div style={{ fontFamily: "monospace", whiteSpace: "pre", textAlign: "center" }}>
+      +---------------------------------------------------+<br />
+      |                 Tailoring Services                |<br />
+      +---------------------------------------------------+<br /><br />
+
+      {/* First row (3 services side by side) */}
+      <div>
+        {services.slice(0, 3).map((s, i) => (
+          <ServiceCard key={i} {...s} />
         ))}
+      </div>
+
+      <br />
+
+      {/* Second row (Blouse alone) */}
+      <div>
+        <ServiceCard {...services[3]} />
       </div>
     </div>
   );
-}
+};
 
-export default TailorShop;//its mandatory to export the component to import it in App.js because im creating separate file for the component.
+export default TailorShop;

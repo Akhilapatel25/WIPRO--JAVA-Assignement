@@ -10,7 +10,7 @@ function GroceryList({ items }) {
           <li key={index}>{item}</li>
         ))}
       </ul>
-      <button onClick={() => alert("Groceries Added to Cart!")}>
+      <button onClick={() => alert("Groceries Added to Cart!")}> {/* it is to get alert popup message that ,after we click on add to cart then it will display that groceries are added to cart(like verfication)*/ }
         Add to Cart
       </button>
     </div>
@@ -18,3 +18,4 @@ function GroceryList({ items }) {
 }
 
 export default GroceryList;
+

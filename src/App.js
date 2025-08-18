@@ -10,6 +10,12 @@ import JuiceList from './myreactfiles/JuiceList7';
 import Restaurant from './myreactfiles/Restaurant8';
 import TempleList from './myreactfiles/TempleList9';
 import TailorShop from './myreactfiles/TailorShop10';
+import Fruits from './myreactfiles/Fruits11';
+import TelivisionManager from './myreactfiles/TelivisionManager12';
+import MarriageForm from './myreactfiles/MarriageForm13';
+import AccessoriesForm from './myreactfiles/AccessoriesForm';
+import BakingForm from './myreactfiles/BakingForm';
+
 
 
 
@@ -18,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <GroceryList items={groceries} />
+      <GroceryList items={groceries} /> {/* groceries is a prop being passed to GroceryList.*/}
       <Car2 brand=" Maruthi Suzuki" model="Swift" color="Grey" year="2020" />
       <Phone3 />
       <SweetsList />
@@ -28,6 +34,12 @@ function App() {
       <Restaurant />
       <TempleList />
       <TailorShop />
+      <Fruits />
+      <TelivisionManager />
+      <MarriageForm />
+      <AccessoriesForm />
+      <BakingForm />
+    
     </div>
   );
 }

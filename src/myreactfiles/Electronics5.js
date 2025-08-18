@@ -1,25 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
-const SweetsList = () => {
-  // Array of sweets (JSON objects)
-  const sweets = [
-    { id: 1, name: "Kashmir Kalakandh", price: 120 },
-    { id: 2, name: "Motichoor Laddu", price: 80 },
-    { id: 3, name: "Peda", price: 70 },
-    { id: 4, name: "Mysore Pak", price: 150 },
-    { id: 5, name: "Jilebi", price: 90 }
-  ];
+function Electronics() {
+  // useState hooks for each field
+  const [name, setName] = useState("AC");
+  const [brand, setBrand] = useState("LG");
+  const [price, setPrice] = useState(20000);
+
+  // handler functions
+  const updateBrand = () => {
+    setBrand("IFB"); // Example: update to IFB
+  };
+
+  const increasePrice = () => {
+    setPrice(price + 2000); // Increase price by 2000
+  };
 
   return (
-    <div>
-      <h2>Sweets List</h2>
-      {sweets.map((sweet) => (
-        <div key={sweet.id}>
-          {sweet.name} - Price: ₹{sweet.price}
-        </div>
-      ))}
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+      <h2>Electronic Item Details</h2>
+      <p><b>Name:</b> {name}</p>
+      <p><b>Brand:</b> {brand}</p>
+      <p><b>Price:</b> ₹{price}</p>
+
+      <button onClick={updateBrand} style={{ marginRight: "10px" }}>
+        Update Brand
+      </button>
+      <button onClick={increasePrice}>
+        Increase Price
+      </button>
     </div>
   );
-};
+}
 
-export default SweetsList;//its mandatory to export the component to import it in App.js because im creating separate file for the component.
+export default Electronics;
